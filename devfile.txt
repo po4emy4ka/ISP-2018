@@ -1,2 +1,6 @@
 Hello devbranch!
+<<<<<<< HEAD
 new infomation
+=======
+fgfg
+>>>>>>> dev
