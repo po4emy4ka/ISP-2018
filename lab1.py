@@ -8,6 +8,22 @@ def algebraic_complements(a, i, j):
     #print()
     return (-1)**(i + j) * np.linalg.det(a)
     
+def create_alpha(a):
+    for i in range(len(a)):
+        curr_ii = a[i][i] 
+        for j in range(len(a)):
+            if i == j:
+                a[i][j] = 0
+            else:
+                a[i][j] = (-1) * a[i][j] / curr_ii
+    return a
+
+def create_betta(a, b):
+    betta = np.zeros(len(a))
+    for i in range(len(a)):
+        betta[i] = b[i] / a[i][i]
+    return betta
+
 
 def reversing(a):
     # союзная
